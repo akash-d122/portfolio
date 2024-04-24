@@ -1,0 +1,902 @@
+
+
+body{
+    margin:0px;
+}
+
+#body-header{
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url(Images/macbook_mouse.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top:1.2rem;
+}
+
+
+.nav-bar-list{
+    list-style : none;
+    padding-left:0px;
+    margin:0px;
+}
+
+
+.nav-bar-list li{
+    display: inline-block;
+    margin: 0px 15px 15px 0px;
+}
+
+.nav-bar-list li a{
+    color:white;
+    font-weight: bold;
+    font-size : 1.2rem;
+    text-decoration:none;
+    transition: color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
+}
+
+.nav-bar-list li a:hover{
+    border-bottom: 1.5px solid lightgrey;
+    color:lightgray;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* Title control of all sections */
+
+.title{
+    text-align : center;
+    padding-top : 5vh;
+    padding-bottom: 8vh;
+}
+
+.title i{
+    font-size: 1.8rem;
+    color:#2857a4;
+    margin-right: 10px;
+}
+
+.title h2{
+    color: #2857a4;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:50;
+    font-size: 2.3rem;
+    display: inline;
+}
+
+
+/* Social Container Styles */
+
+#name-social-container{
+    margin-top:20vh;
+}
+
+#my-name{
+    color:white;
+    font-weight: 900;
+    font-size:3rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.social-bar-list{
+    list-style: none;
+    padding-left: 0px;
+    margin:0px;
+    margin-top : 3vh;
+}
+
+.social-bar-list li{
+    display: inline-block;
+    margin: 0px 15px 15px 0px;
+}
+
+.social-bar-list li a {
+    color:white;
+}
+
+.social-bar-list li a i{
+    padding : 0.6rem;
+    font-size: 2.5vh;
+    width: 23px;
+    height: 23px;
+    border-radius: 100%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.social-bar-list li a i:hover{
+    box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.3);
+}
+
+
+
+/* About Sectioin */
+
+#about{
+    position: relative;
+}
+
+#display-picture{
+    width:12rem;
+    height: 12rem;
+    margin:auto;
+    margin-top:-11vh;
+}
+
+#display-picture img{
+    height: 100%;
+    width: 100%;
+    border:3px solid rgb(245, 241, 241);
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px 3px rgba(10, 10, 10, 0.3);
+}
+
+#about p{
+    color:grey;
+    width: 75vw;
+    margin-left:12.5vw;
+    text-align:justify;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 0.7px;
+    line-height: 1.6;
+}
+
+#about p span{
+    color:#2857a4;
+}
+
+
+/* Skills Section */
+
+#skills{
+    margin-top: 7vh;
+    background-color: rgb(239, 239, 239);
+    width:100%;
+    height: 50vh;
+    border-radius: 10px;
+    margin-top:6vh;
+    overflow: hidden;
+}
+
+
+
+#skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    width: 75vw;
+    margin-left:12.5vw;
+}
+
+.skill-tab{
+    background-color: lightgray;
+    width: 12vw;
+    height: 4vh;
+    border-radius: 15px;
+    margin:2.5vw;
+    display: flex ;
+    align-items: center;
+    box-shadow: -0.5px 0px 1px rgb(104, 103, 103) inset;
+}
+
+.skill-tab span{
+    color:white;
+    margin-left : 8px;
+    position: absolute;
+}
+
+.skill-progress {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(144, 142, 142);
+    border-radius: 15px 0px 0px 15px;
+    box-shadow: 1px 0px 1px rgb(105, 104, 104);
+}
+
+/* colors for progress bar */
+
+.orange{
+    background-color: lightsalmon;
+}
+
+.blue{
+    background-color: rgb(85, 135, 226);
+}
+
+.green{
+    background-color: rgb(54, 209, 158);
+}
+
+.c4{
+    background-color: rgb(219, 91, 91);
+}
+
+.c5{
+    background-color: rgb(176, 132, 79);
+}
+
+.c6 {
+    background-color: rgb(180, 83, 132);
+}
+
+.c7 {
+    background-color: rgb(40, 200, 194);
+}
+
+
+/* percentages for progress bar */
+
+.eighty-percent{
+    width:80%;
+}
+
+.ninghty-percent{
+    width:87%;
+}
+
+.seventy-percent{
+    width:70%;
+}
+
+.seventy-five-percent{
+    width:75%;
+}
+
+.eighty-five-percent{
+    width:84%;
+}
+
+/* Projects Tab */
+
+#project-title{
+    padding-bottom: 5vh;
+}
+
+#project-list{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#project-list a img{
+    height: 28vh;
+    width: 22vw;
+    margin:30px;
+}
+
+
+/* Education block */
+
+#education{
+    /* background-color: rgb(232, 232, 232); */
+    border-radius: 15px;
+    background-color: rgb(239, 239, 239);
+    height: 100vh;
+}
+
+#education-title{
+    padding-bottom : 1vh;
+}
+
+#timeline{
+    position : realative;
+    margin-left : 10vw;
+    right: 10vh;
+    width : 80vw;
+    height: 75vh;
+}
+
+.timeline-box{
+    position : relative;
+    height: 20vh;
+    width : 30%;
+    top: 6vh;
+    bottom: 6vh;
+    left:55%;
+}
+
+.timeline-box:nth-child(2n){
+    left:17%;
+}
+
+
+#timeline-divider{
+    position : absolute;
+    height: 68%;
+    width: 0;
+    border: 1.3px dashed #80aad2;
+    left: 51.6%;
+    margin-top: 6.5%;
+}
+
+#timeline-travelor{
+    position: sticky;
+    top:25vh;
+    transform: rotate(90deg);
+    margin-top :-25px;
+    font-size: 1.34rem;
+    margin-left:-1.8px;
+    color:#2857a4;
+    z-index: 1;
+}
+
+#point-one{
+    top : -0.1rem;
+}
+
+#point-two{
+    top : 11rem;
+}
+
+#point-three{
+    top : 21rem;
+}
+
+
+.timeline-point{
+    background-color: rgb(173, 172, 172);
+    border-radius: 50%;
+    position: absolute;
+    opacity : 90%;
+    height: 0.56rem;
+    width : 0.56rem;
+    left : -0.28rem;
+}
+
+
+.degree-name{
+    color: #2857a4;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.institute-name{
+    text-align: right;
+    color: rgb(246, 164, 120);
+    font-size: 0.9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.institute-name span{
+    color:rgb(160, 160, 160);
+}
+
+.date{
+    text-align: right;
+}
+
+.impformation{
+    text-align:justify;
+    font-size: 1rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(122, 121, 121);
+}
+
+
+
+
+/* Contact Block */
+
+
+#contact{
+    height: 83vh;
+    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+    color:white;
+}
+
+#contact-title{
+    padding-bottom: 5vh;
+}
+
+
+#contact-title>h2,#contact-title>i{
+    color:white;
+    font-size: 3rem;
+}
+
+#contact-div{
+    display: flex;
+    justify-content: space-around;
+    margin-left:10vw;
+}
+
+#input-form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 4vw;
+    width: 52vw;
+}
+
+
+#input-form input,#input-form textarea{
+     background-color: inherit;
+     border-bottom: 2px solid rgb(253, 252, 252) !important;
+     border:none;
+     width: 100%;
+     outline: none;
+     font-size: 1.3rem;
+     margin:27px;
+     height: 4vh;
+}
+
+
+#input-form button{
+    color:white;
+    background-color: inherit;
+    border: 2.6px solid white;
+    height:5.5vh;
+    width: 11.6vw;
+    margin:auto;
+    margin-top:20px;
+    font-size: 1rem;
+    font-weight: 750;
+    border-radius: 5px;
+    transition: font-size ease-in-out 0.2s;
+}
+
+#input-form button:hover{
+    color:lightgray;
+    box-shadow: 0px 0px 3px lightgrey;
+    font-size: 1.05rem;
+}
+
+#contact-details{
+    width: 58%;
+    margin-right: 10vw;
+}
+
+#contact-details h3 {
+    font-size:1.5rem;
+}
+
+#contact-details span{
+    display: block;
+    margin-bottom:20px;
+}
+
+#contact-details span i{
+    margin-right:5.5px;
+}
+
+#contact-bar {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#contact-bar li a i{
+    margin:9px;
+    font-size: 1.3rem;
+}
+
+#contact-bar li a i:hover{
+    box-shadow: 0px 0px 6px 4px #7388aa;
+}
+
+
+/* Media Queries for Tab like View */
+
+
+@media screen and (max-width : 768px){
+
+    html {
+        font-size: 12px;
+    }   
+
+    /* Header Section  */
+
+    #body-header{
+        height: 46.5vh;
+        background-size: contain;
+        background-position: top;
+    }
+
+    .nav-bar-list{
+        font-size : 1.3rem;
+        margin-top : 1.5vh;
+    }
+
+    .title{
+        padding-top: 8.5vh;
+        padding-bottom: 10vh;
+    }
+
+    .title i{
+        font-size: 3rem;
+    }
+
+    .title h2 {
+        font-size: 3.5rem;
+    }
+
+    #name-social-container {
+        margin-top:13vh;
+    }
+
+    #name-social-container #my-name{
+        margin-bottom: 3vh;
+    }
+
+    .social-bar-list {
+        margin-left: 2vw;
+    }
+
+    /* About Section  */
+    
+    #display-picture {
+        margin-top : -9.8vh;
+        width: 13rem;
+        height: 13rem;
+    }
+
+    
+    #about p {
+        font-size: 1.60rem;
+    }
+
+    /* Skill Section  */
+
+    #skills{
+        height: 71.5vh;
+    }
+
+    .skill-tab{
+        width: 30vw;
+        height: 4.8vh;
+        border-radius: 17px;
+        margin : 24px;
+    }
+
+    .skill-progress {
+        border-radius: 17px 0px 0px 17px;
+    }
+
+    /* Portfolio Section  */
+    
+
+    #project-list a img{
+        height: 30vh;
+        width : 45vw;
+    }
+
+    /* Eductaion Section  */
+
+    #education {
+        height: 120vh;
+    }
+
+    #education-title i {
+        font-size : 2.5rem;
+    }
+
+    #education-title h2 {
+        font-size : 3rem;
+    }
+    
+    .timeline-box {
+        left : 12vw !important;
+        width: 60vw;
+        margin-top: 9vh;
+    }
+
+    #timeline-divider{
+        height: 75%;
+        border: 1.5px dashed #646362;
+        left: 13vw;
+        margin-top: 10vh;
+    }
+    
+    #timeline-travelor{
+        font-size: 1.9rem;
+        margin-left: -1.6px;
+        margin-top: -20px;
+    }
+
+    .timeline-point {
+        height: 12px;
+        width: 12px;
+        left : -0.801vw;
+    }
+    
+    #point-one{
+        top : -0.1rem;
+    }
+    
+    #point-two{
+        top : 26vh;
+    }
+    
+    #point-three{
+        top : 57vh;
+    }
+
+    .degree-name{
+        font-size: 1.85rem;
+        margin-bottom: -12.4px;
+    }
+    
+    .institute-name{
+        font-size: 1.3rem;
+    }
+    
+    .impformation{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    /* Contact Section */
+    
+    #contact {
+        height: 151vh;
+    }
+
+    #contact-title i{
+        font-size: 3rem;
+    }
+
+    #contact-title h2 {
+        font-size : 3.5rem;
+        margin-left: 0.5vw;
+    }
+
+    #contact-div {
+        display: block;
+    }
+
+    #input-form {
+        width : 80vw;
+        margin-top: 10.5vh;
+    }
+
+    #input-form input {
+        margin-bottom: 2.5vh;
+    }
+
+    #input-form button {
+        width: 23vw;
+        font-size: 1.4rem;
+    }
+
+    #input-form button:hover {
+        font-size: 1.45rem;
+    }
+
+    #contact-details {
+        margin-top: 19.5vh;
+        width: 80vw;
+    }
+
+    #contact-details h3 {
+        font-size: 1.6rem;
+    }
+
+    #contact-details p {
+        font-size: 1.3rem;
+    }
+
+    #contact-details span{
+        font-size: 1.4rem;
+    }
+
+    #contact-bar {
+        margin-top: 14.5vh;
+    }
+
+    #contact-bar li {
+        margin: 0.8vw;
+    }
+
+    #contact-bar li a i{
+        font-size: 1.6rem;
+    }
+}
+
+
+/* Media Queries for Mobile View */
+
+
+@media screen and (max-width: 572px) {
+
+    html{
+        font-size: 10.5px;
+    }
+
+    /* Header Section  */
+
+    #body-header {
+        height: 42.5vh;
+        background-size: 132%;
+    }
+
+    #drop-down span i {
+        color: white;
+        font-size: 2.5rem;
+        margin-left : 90vw;
+        margin-top : 1vh;
+    } 
+
+    
+
+    .nav-bar-list{
+        /* display: none; */
+        position: absolute;
+        margin-left : 72.2vw;
+        margin-top: -0.1vh;
+        width: 0vw;
+        background-color :#7c7a63;
+        box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+        z-index: 1;
+        transition: all ease-in-out 0.5s;
+    }
+    
+    .nav-bar-list li{
+        display: block;
+        margin : 0;
+        padding: 2px;
+    }
+    
+    .nav-bar-list li a{
+        color:white;
+        font-weight: bold;
+        font-size : 0rem;
+        text-decoration:none;
+        transition: all ease-in-out;
+    }
+    
+
+
+    #drop-down:hover .nav-bar-list {
+        width: 17vw;
+    }
+    
+    #drop-down:hover .nav-bar-list li a{
+        font-size: 1.5rem;
+    }    
+
+    #my-name {
+        font-size: 3.5rem;
+    }
+
+    #name-social-container {
+        margin-top: 14.1vh;
+    }
+
+    #name-social-container .social-bar-list li a i{
+        font-size: 1.5rem;
+        padding: 0.4rem;
+    }
+
+    /* About Section  */
+
+    #display-picture {
+        width: 15rem;
+        height: 15rem;
+        margin-top: -9.7vh;
+    }
+
+    #about p {
+        font-size: 1.6rem;
+        margin-top: 3.6vh;
+        line-height: 3vh;
+    }
+
+    /* Skills Section  */
+
+    #skills {
+        height: 100vh;
+    }
+
+    .title i{
+        font-size: 3.5rem !important; 
+    }
+
+    .title h2 {
+        font-size: 4rem !important;
+    }
+
+    #skill-title {
+        margin-bottom: 2vh;
+    }
+    
+    .skill-tab {
+        width: 31.4vw;
+        height: 4.7vh;
+        margin : 3.165vh;
+    }
+
+    /* Portfolio Section  */
+
+    #projects {
+        height: 230vh;
+    }
+
+    #project-list {
+        margin-top : 6vh;
+    }
+    
+    #project-list a img{
+        height: 32vh;
+        width : 55vw;
+    }
+
+    /* Educatioin Section */
+
+    #education {
+        height: 130vh;
+    }
+
+    #timeline-divider {
+        height: 85vh;
+    }
+    
+    #timeline-travelor{
+        font-size: 2.5rem;
+    }
+
+    .timeline-point {
+        height: 12px;
+        width: 12px;
+        left : -1.09vw;
+    }
+    
+    #point-one{
+        top : -0.1rem;
+    }
+    
+    #point-two{
+        top : 28.5vh;
+    }
+    
+    #point-three{
+        top : 58.1vh;
+    }
+
+    .degree-name{
+        font-size: 2rem;
+        margin-bottom: -12.4px;
+    }
+    
+    .institute-name{
+        font-size: 1.5rem;
+    }
+    
+    .impformation{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+
+    /* Contact Section */
+
+    #contact-details {
+        margin-top: 22vh;
+    }
+
+    #contact-details h3 {
+        font-size: 1.9rem;
+    }
+
+    #contact-details p {
+        font-size: 1.5rem;
+    }
+
+    #contact-details span{
+        font-size: 1.6rem;
+    }
+
+    #contact-bar {
+        margin-top: 10.5vh;
+    }
+
+    #contact-bar li {
+        margin: 1.2vw;
+    }
+
+    #contact-bar li a i{
+        font-size: 1.8rem;
+    }
+
+
+
+}
