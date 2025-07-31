@@ -1,22 +1,26 @@
-import { clientReviews } from '../constants/index.js';
+import { testimonials } from '../constants/index.js';
 
 const Clients = () => {
   return (
     <section className="c-space my-20">
-      <h3 className="head-text">Hear from My Clients</h3>
+      <h3 className="head-text">Testimonials</h3>
 
       <div className="client-container">
-        {clientReviews.map((item) => (
-          <div key={`review-${item.id}`} className="client-review">
+        {testimonials.map((testimonial) => (
+          <div key={`testimonial-${testimonial.id}`} className="client-review">
             <div>
-              <p className="text-white-800 font-light">{item.review}</p>
+              <p className="text-white-800 font-light">{testimonial.content}</p>
 
               <div className="client-content">
                 <div className="flex gap-3">
-                  <img src={item.img} alt="reviewer" className="w-12 h-12 rounded-full" />
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name} 
+                    className="w-12 h-12 rounded-full object-cover" 
+                  />
                   <div className="flex flex-col">
-                    <p className="font-semibold text-white-800">{item.name}</p>
-                    <p className="text-white-500 md:text-base text-sm font-light">{item.position}</p>
+                    <p className="font-semibold text-white-800">{testimonial.name}</p>
+                    <p className="text-white-500 md:text-base text-sm font-light">{testimonial.position}</p>
                   </div>
                 </div>
 

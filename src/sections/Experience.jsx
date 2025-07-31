@@ -1,36 +1,62 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, useProgress, Html } from '@react-three/drei';
 
 import Developer from '../components/Developer.jsx';
-import CanvasLoader from '../components/Loading.jsx';
-import { workExperiences } from '../constants/index.js';
+import { whatIDo } from '../constants/index.js';
+
+function Loader() {
+  const { progress } = useProgress();
+  return (
+    <Html center style={{ color: 'white' }}>
+      {Math.round(progress)}% loaded
+    </Html>
+  );
+}
 
 const WorkExperience = () => {
   const [animationName, setAnimationName] = useState('idle');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <section className="c-space my-20" id="work">
       <div className="w-full text-white-600">
-        <p className="head-text">My Work Experience</p>
+        <p className="head-text">What I Do</p>
 
         <div className="work-container">
-          <div className="work-canvas">
-            <Canvas>
-              <ambientLight intensity={7} />
-              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-              <directionalLight position={[10, 10, 10]} intensity={1} />
-              <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+          <div className="work-canvas" style={{ minHeight: '500px' }}>
+            <Canvas
+              camera={{ position: [0, 0, 5], fov: 50 }}
+              gl={{ antialias: true, alpha: true }}
+              dpr={[1, 2]}
+            >
+              <color attach="background" args={['#0a192f']} />
+              <ambientLight intensity={0.5} />
+              <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
+              <directionalLight position={[0, 5, 10]} intensity={1} />
+              <OrbitControls 
+                enableZoom={false} 
+                maxPolarAngle={Math.PI / 2} 
+                minPolarAngle={Math.PI / 3}
+                enablePan={false}
+              />
 
-              <Suspense fallback={<CanvasLoader />}>
-                <Developer position-y={-3} scale={3} animationName={animationName} />
+              <Suspense fallback={<Loader />}>
+                <Developer position-y={-1.5} scale={2} animationName={animationName} />
               </Suspense>
             </Canvas>
           </div>
 
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
-              {workExperiences.map((item, index) => (
+              {whatIDo.map((item, index) => (
                 <div
                   key={index}
                   onClick={() => setAnimationName(item.animation.toLowerCase())}
@@ -47,10 +73,7 @@ const WorkExperience = () => {
 
                   <div className="sm:p-5 px-2.5 py-5">
                     <p className="font-bold text-white-800">{item.name}</p>
-                    <p className="text-sm mb-5">
-                      {item.pos} -- <span>{item.duration}</span>
-                    </p>
-                    <p className="group-hover:text-white transition-all ease-in-out duration-500">{item.title}</p>
+                    <p className="group-hover:text-white transition-all ease-in-out duration-500 mt-2">{item.description}</p>
                   </div>
                 </div>
               ))}
